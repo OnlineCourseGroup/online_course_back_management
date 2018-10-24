@@ -1,4 +1,4 @@
-# A project for lottery
+# A project for online
 
 > a simple demo for group
 
