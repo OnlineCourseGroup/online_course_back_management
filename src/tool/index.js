@@ -1,4 +1,3 @@
-import { AdminTypes } from 'enum'
-
-export * from './wrapperElement'
+// export { AdminTypes } from 'enum';
+export * from './wrapperElement';
 

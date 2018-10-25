@@ -1,6 +1,6 @@
 export default {
-  collapse (context) {
-    context.commit('collapse')
+  collapse(context) {
+    context.commit('collapse');
   },
   // push (context) {
   //   context.commit('push')
@@ -11,4 +11,4 @@ export default {
   // pop(context) {
   //   context.commit('pop')
   // }
-}
+};

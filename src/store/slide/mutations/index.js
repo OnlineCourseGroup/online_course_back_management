@@ -1,7 +1,7 @@
 export default {
-  collapse (state) {
-    const flag = state.isCollapse
-    state.isCollapse = !flag
+  collapse(state) {
+    const flag = state.isCollapse;
+    state.isCollapse = !flag;
   },
   // push (state) {
   //   state.list.push(Math.random())
@@ -13,4 +13,4 @@ export default {
   // pop(state) {
   //   state.list.pop()
   // }
-}
+};

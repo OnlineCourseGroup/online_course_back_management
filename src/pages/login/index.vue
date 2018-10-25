@@ -2,17 +2,17 @@
   <div class="login--wrapper both--100">
     <div class="box auto--margin">
       <div class="login--hint">
-        <h2 class="login--title">导游中心管理系统</h2>
+        <h2 class="login--title">课程中心管理系统</h2>
         <div class="login--tip">账号密码登陆</div>
       </div>
       <el-form :model="models" status-icon :rules="rules" ref="form" class="login--form">
         <el-form-item prop="account" class="width--100">
-          <el-input v-model="models.account" auto-complete="off" placeholder="账号">
+          <el-input v-model="models.account" auto-complete="off" placeholder="账号（默认123456）">
             <i slot="prefix" class="el-input__icon el-icon-info"></i>
           </el-input>
         </el-form-item>
         <el-form-item prop="password" class="width--100">
-          <el-input type="password" v-model="models.password" auto-complete="off" placeholder="密码">
+          <el-input type="password" v-model="models.password" auto-complete="off" placeholder="密码(默认123456)">
             <i slot="prefix" class="el-input__icon el-icon-edit"></i>
           </el-input>
         </el-form-item>
@@ -21,7 +21,9 @@
         </el-form-item>
       </el-form>
     </div>
-
+    <div class="footer">
+      @Copyright-江西南昌趣学科技有限公司
+    </div>
   </div>
 </template>
 
@@ -119,12 +121,16 @@ export default {
 
 <style lang="stylus" scoped>
 .login--wrapper {
+  padding-top: 170px;
+  box-sizing: border-box;
+  background: url('../../assets/bg.jpg') no-repeat;
+  background-size: 100% 100%;
   .box {
     width: 400px;
-    margin-top: 170px;
   }
 
   .login--hint {
+    color: white;
     .login--title {
       text-align: center;
       font-size: 40px;
@@ -134,6 +140,7 @@ export default {
     .login--tip {
       text-align: center;
       font-size: 24px;
+      
       margin-bottom: 10px;
     }
   }
@@ -141,5 +148,14 @@ export default {
 
 .login--form {
   flex-direction: column;
+}
+.footer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  font-size: 14px;
+  color: white;
 }
 </style>

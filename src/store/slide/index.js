@@ -1,7 +1,8 @@
-import state from './state'
-import actions from './actions'
-import mutations from './mutations'
-import getters from './getters'
+import state from './state';
+import actions from './actions';
+import mutations from './mutations';
+import getters from './getters';
+
 export default {
   state,
   // 暴露给外部显示的一些状态
@@ -10,7 +11,7 @@ export default {
   actions,
   // 真正对数据进行操作的地方
   mutations,
-}
+};
 
 // import shop from '../../api/shop'
 

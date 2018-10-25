@@ -1,6 +1,6 @@
-import List from 'pages/order/list'
-import Add from 'pages/order/add'
-import Update from 'pages/order/update'
+import List from 'pages/order/list';
+import Add from 'pages/order/add';
+import Update from 'pages/order/update';
 
 export default [
   {
@@ -18,4 +18,4 @@ export default [
     name: 'updateo',
     component: Update,
   },
-]
+];

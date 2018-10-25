@@ -1,1 +1,1 @@
-export * from './AdminType'
+export * from './AdminType';

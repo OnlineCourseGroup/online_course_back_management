@@ -1,6 +1,6 @@
-import List from 'pages/admin/list'
-import Add from 'pages/admin/add'
-import Update from 'pages/admin/update'
+import List from 'pages/admin/list';
+import Add from 'pages/admin/add';
+import Update from 'pages/admin/update';
 
 export default [
   {
@@ -18,4 +18,4 @@ export default [
     name: 'updatea',
     component: Update,
   },
-]
+];

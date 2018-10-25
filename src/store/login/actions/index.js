@@ -1,6 +1,6 @@
 export default {
-  login (context, obj) {
-    context.commit('login', obj)
+  login(context, obj) {
+    context.commit('login', obj);
   },
   // push (context) {
   //   context.commit('push')
@@ -11,4 +11,4 @@ export default {
   // pop(context) {
   //   context.commit('pop')
   // }
-}
+};

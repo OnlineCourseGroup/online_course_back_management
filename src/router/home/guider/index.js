@@ -1,6 +1,6 @@
-import List from 'pages/guider/list'
-import Add from 'pages/guider/add'
-import Update from 'pages/guider/update'
+import List from 'pages/guider/list';
+import Add from 'pages/guider/add';
+import Update from 'pages/guider/update';
 
 export default [
   {
@@ -18,4 +18,4 @@ export default [
     name: 'updateg',
     component: Update,
   },
-]
+];

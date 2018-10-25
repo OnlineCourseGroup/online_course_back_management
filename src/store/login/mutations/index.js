@@ -1,6 +1,6 @@
 export default {
-  login (state, admin) {
-    state.admin = admin
+  login(state, admin) {
+    state.admin = admin;
   },
   // push (state) {
   //   state.list.push(Math.random())
@@ -12,4 +12,4 @@ export default {
   // pop(state) {
   //   state.list.pop()
   // }
-}
+};

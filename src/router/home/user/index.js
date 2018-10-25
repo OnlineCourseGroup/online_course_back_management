@@ -1,6 +1,6 @@
-import List from 'pages/user/list'
-import Add from 'pages/user/add'
-import Update from 'pages/user/update'
+import List from 'pages/user/list';
+import Add from 'pages/user/add';
+import Update from 'pages/user/update';
 
 export default [
   {
@@ -18,4 +18,4 @@ export default [
     name: 'updateu',
     component: Update,
   },
-]
+];

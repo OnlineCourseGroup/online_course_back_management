@@ -1,14 +1,14 @@
-import HomePage from 'pages/home'
-import DashBoardRoutes from './dashboard'
-import UserRoutes from './user'
-import GuiderRoutes from './guider'
-import AdminRoutes from './admin'
-import OrderRoutes from './order'
+import HomePage from 'pages/home';
+import DashBoardRoutes from './dashboard';
+import UserRoutes from './user';
+import GuiderRoutes from './guider';
+import AdminRoutes from './admin';
+import OrderRoutes from './order';
 
 
 export default [
-  { 
-    path: '/home', 
+  {
+    path: '/home',
     component: HomePage,
     name: 'home',
     children: [
@@ -19,4 +19,4 @@ export default [
       ...OrderRoutes,
     ],
   },
-]
+];
