@@ -11,7 +11,7 @@
             <span>{{ props.row.id }}</span>
           </el-form-item>
           <el-form-item label="姓名：">
-            <span>{{ props.row.name }}</span>
+            <span>{{ props.row.admin_employee_no }}</span>
           </el-form-item>
           <el-form-item label="账号：">
             <span>{{ props.row.account }}</span>
@@ -23,13 +23,16 @@
             <span>{{ props.row.password | filterPassword}}</span>
           </el-form-item>
           <el-form-item label="创建时间：">
-            <span>{{ props.row.createTime }}</span>
+            <span>{{ props.row.gmt_create_time }}</span>
           </el-form-item>
-          <el-form-item label="创建人：">
-            <span>{{ props.row.creator }}</span>
+          <el-form-item label="管理员状态">
+            <span>{{ props.row.admin_status }}</span>
           </el-form-item>
-          <el-form-item label="类型：">
-            <span>{{ props.row.type | filterAdminTypes }}</span>
+          <el-form-item label="管理员信息：">
+            <span>{{ props.row.admin_info }}</span>
+          </el-form-item>
+           <el-form-item label="特别信息：">
+            <span>{{ props.row.extra_info }}</span>
           </el-form-item>
         </el-form>
       </template>
@@ -40,12 +43,12 @@
         width="180">
       </el-table-column>
       <el-table-column
-        prop="name"
+        prop="account"
         label="姓名"
         width="180">
       </el-table-column>
       <el-table-column
-        prop="creator"
+        prop="admin_employee_no"
         label="创建人">
       </el-table-column>
       <el-table-column

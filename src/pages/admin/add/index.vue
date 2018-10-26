@@ -23,16 +23,6 @@
             <i slot="prefix" class="el-input__icon el-icon-edit"></i>
           </el-input>
         </el-form-item>
-        <el-form-item class="width--100" prop="type">
-          <el-select v-model="models.type" placeholder="请选择管理员类别" class="width--100">
-            <el-option
-              v-for="item in types"
-              :key="item.value"
-              :label="item.key"
-              :value="item.value">
-            </el-option>
-          </el-select>
-        </el-form-item>
         <el-form-item  class="width--100 flex--space--around">
           <el-button type="primary" @click="submitForm('form')">确定</el-button>
           <el-button type="normal" @click="cancel()">取消</el-button>
