@@ -78,13 +78,15 @@ export default {
   min-width 200px
   width 200px
   &.collapse--true {
-    width 80px
-    min-width 80px
+    width 64px
+    min-width 64px
   }
 }
 .header {
   align-items center
+  background-color headercolor;
   .icon--wrapper {
+    color: #fff;
     .both--100 {
       font-size 30px
       cursor pointer

@@ -11,7 +11,7 @@
             <span>{{ props.row.id }}</span>
           </el-form-item>
           <el-form-item label="姓名：">
-            <span>{{ props.row.admin_employee_no }}</span>
+            <span>{{ props.row.adminEmployeeNo }}</span>
           </el-form-item>
           <el-form-item label="账号：">
             <span>{{ props.row.account }}</span>
@@ -19,20 +19,14 @@
           <el-form-item label="手机：">
             <span>{{ props.row.phone }}</span>
           </el-form-item>
-          <el-form-item label="密码：">
+          <!-- <el-form-item label="密码：">
             <span>{{ props.row.password | filterPassword}}</span>
-          </el-form-item>
+          </el-form-item> -->
           <el-form-item label="创建时间：">
-            <span>{{ props.row.gmt_create_time }}</span>
+            <span>{{ props.row.gmtCreateTime }}</span>
           </el-form-item>
           <el-form-item label="管理员状态">
             <span>{{ props.row.admin_status }}</span>
-          </el-form-item>
-          <el-form-item label="管理员信息：">
-            <span>{{ props.row.admin_info }}</span>
-          </el-form-item>
-           <el-form-item label="特别信息：">
-            <span>{{ props.row.extra_info }}</span>
           </el-form-item>
         </el-form>
       </template>
@@ -40,16 +34,32 @@
       <el-table-column
         prop="id"
         label="编号"
+        width="80">
+      </el-table-column>
+      <el-table-column
+        prop="adminEmployeeNo"
+        label="员工账号"
+        width="180">
+      </el-table-column>
+     <el-table-column
+        prop="phone"
+        label="手机号"
         width="180">
       </el-table-column>
       <el-table-column
         prop="account"
         label="姓名"
-        width="180">
+        width="120">
       </el-table-column>
       <el-table-column
-        prop="admin_employee_no"
-        label="创建人">
+        prop="gmtCreateTime"
+        label="创建时间"
+        width="220">
+      </el-table-column>
+      <el-table-column
+        prop="status"
+        label="状态"
+        width="80">
       </el-table-column>
       <el-table-column
       label="操作"

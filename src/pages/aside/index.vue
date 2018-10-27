@@ -1,5 +1,15 @@
 <template>
-  <el-menu :default-active="activeRoute" class="el-menu-vertical-demo"  :collapse="slide.isCollapse" :router="true" :show-timeout="100" :hide-timeout="100">
+  <el-menu 
+    background-color="#545c64"
+    text-color="#fff"
+    active-text-color="#ffd04b"
+    :default-active="activeRoute" 
+    class="el-menu-vertical-demo"  
+    :collapse="slide.isCollapse" 
+    :router="true" 
+    :show-timeout="100" 
+    :hide-timeout="100"
+  >
     <template v-for="item in list">
       <el-menu-item v-if="!item.children" :key="item.name" :index="item.name" >
          <i :class="'el-icon-'+item.icon"></i>
@@ -55,19 +65,19 @@ export default {
           ]
         },
         {
-          name: "guide",
-          text: "导游模块",
+          name: "manager",
+          text: "讲师模块",
           icon: "service",
           children: [
             {
-              name: "glist",
-              text: "导游列表",
-              path: "glist"
+              name: "mlist",
+              text: "讲师列表",
+              path: "mlist"
             },
             {
-              name: "addg",
-              text: "新添导游",
-              path: "addg"
+              name: "addm",
+              text: "新添讲师",
+              path: "addm"
             }
           ]
         },
@@ -107,7 +117,13 @@ export default {
 };
 </script>
 <style lang="stylus" scoped>
+@import '../../common/colors.styl'
+
 .el-menu-vertical-demo {
+  height: 100%;
+  // .element-item 
+  color: white;
   border: none;
+  background-color: themecolor;
 }
 </style>
