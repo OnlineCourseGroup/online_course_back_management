@@ -6,6 +6,7 @@
 
 const prefix = '';
 export default(config => Object.keys(config).reduce((copy, name) => {
+  // eslint-disable-next-line
   copy[name] = `${prefix}${config[name]}`;
   return copy;
 }, {}))({
@@ -13,29 +14,29 @@ export default(config => Object.keys(config).reduce((copy, name) => {
   // admin block
   onLogin: '/api/admin/login',
   getAllAdmins: '/api/admin/list',
-  deleteAdminById: '/api/admin/del',
-  addAdmin: '/api/admin/add',
+  deleteAdminById: '/api/admin/delete',
+  addAdmin: '/api/admin/insert',
   singleAdmin: '/api/admin/single',
   updateAdmin: '/api/admin/update',
 
   // user block
   getAllUsers: '/api/user/list',
-  deleteUserById: '/api/user/del',
-  addUser: '/api/user/add',
+  deleteUserById: '/api/user/delete',
+  addUser: '/api/user/insert',
   singleUser: '/api/user/single',
   updateUser: '/api/user/update',
 
-  // guider block
-  getAllGuiders: '/api/guider/list',
-  deleteGuiderById: '/api/guider/del',
-  addGuider: '/api/guider/add',
-  singleGuider: '/api/guider/single',
-  updateGuider: '/api/guider/update',
+  // manager block
+  getAllManagers: '/api/manager/list',
+  deleteManagerById: '/api/manager/delete',
+  addManager: '/api/manager/insert',
+  singleManager: '/api/manager/single',
+  updateManager: '/api/manager/update',
 
   // order block
   getAllOrders: '/api/order/list',
-  deleteOrderById: '/api/order/del',
-  addOrder: '/api/order/add',
+  deleteOrderById: '/api/order/delete',
+  addOrder: '/api/order/insert',
   singleOrder: '/api/order/single',
   updateOrder: '/api/order/update',
 
