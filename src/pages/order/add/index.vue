@@ -8,8 +8,8 @@
             <i slot="prefix" class="el-input__icon el-icon-news"></i>
           </el-input>
         </el-form-item>
-        <el-form-item prop="guiderId" class="width--100"> 
-          <el-input v-model="models.guiderId" auto-complete="off" placeholder="向导编号">
+        <el-form-item prop="id" class="width--100"> 
+          <el-input v-model="models.id" auto-complete="off" placeholder="向导编号">
             <i slot="prefix" class="el-input__icon el-icon-mobile-phone"></i>
           </el-input>
         </el-form-item>
@@ -37,7 +37,7 @@ export default {
       return {
         models: {
           userId: '',
-          guiderId: '',
+          id: '',
           totalMoney: '',
           orderTime: '',
         },
@@ -45,7 +45,7 @@ export default {
           userId: [
             { trigger: 'blur', required: true, message: '用户编号不能为空' }
           ],
-          guiderId: [
+          id: [
             { trigger: 'blur', required: true, message: '向导编号不能为空' }
           ],
           totalMoney: [

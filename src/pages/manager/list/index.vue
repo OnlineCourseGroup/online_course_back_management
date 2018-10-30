@@ -80,21 +80,21 @@
 </template>
 
 <script>
-import { getAllGuiders, deleteGuiderById } from 'services'
+import { getAllManagers, deleteManagerById } from 'services'
 import { filterMoney, filterPassword, filterCarNo } from 'tool/filters'
 export default {
   name: 'adminList',
   data() {
     return {
-      guiders: []
+      managers: []
     }
   },
   created() {
-    this.refreshGuiders()
+    this.refreshManagers()
   },
   methods: {
-    refreshGuiders() {
-      getAllGuiders().then(res => {
+    refreshManagers() {
+      getAllManagers().then(res => {
         this.guiders = res
       }).catch(err => {
         this.$message.error(err.message || err || '网络异常')
@@ -111,10 +111,10 @@ export default {
           message: '删除成功',
           type: 'success',
         })
-        deleteGuiderById({
+        deleteManagerById({
           id: row.id
         }).then(res => {
-          this.refreshGuiders()
+          this.refreshManagers()
         }).catch(err => {
           this.$message.error(err.message || err || '删除失败')
         })

@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { addGuider } from 'services'
+import { addManager } from 'services'
 export default {
     created() {
     },
@@ -58,7 +58,7 @@ export default {
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            addGuider({
+            addManager({
               ...this.models,
             }).then(res => {
               this.$message({

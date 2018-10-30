@@ -1,7 +1,7 @@
 import HomePage from 'pages/home';
 import DashBoardRoutes from './dashboard';
 import UserRoutes from './user';
-import GuiderRoutes from './guider';
+import ManagerRoutes from './manager';
 import AdminRoutes from './admin';
 import OrderRoutes from './order';
 
@@ -14,7 +14,7 @@ export default [
     children: [
       ...UserRoutes,
       ...DashBoardRoutes,
-      ...GuiderRoutes,
+      ...ManagerRoutes,
       ...AdminRoutes,
       ...OrderRoutes,
     ],
