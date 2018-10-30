@@ -99,7 +99,7 @@ export default {
     },
     methods: {
       refreshModels(id) {
-        singleAdmin({id}).then(res => {
+        singleAdmin({ id }).then(res => {
           this.models = res
         }).catch(err => {
           this.$message.error(err.message || err || '网络异常')
@@ -133,7 +133,6 @@ export default {
           ...this.models,
           password: '123456'
         }
-
         const ok = () => {
           updateAdmin(params).then(res => {
             this.$message({
