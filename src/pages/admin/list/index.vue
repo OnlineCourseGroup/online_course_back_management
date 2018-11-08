@@ -10,23 +10,8 @@
           <el-form-item label="编号：">
             <span>{{ props.row.id }}</span>
           </el-form-item>
-          <el-form-item label="姓名：">
-            <span>{{ props.row.adminEmployeeNo }}</span>
-          </el-form-item>
-          <el-form-item label="账号：">
+           <el-form-item label="账号：">
             <span>{{ props.row.account }}</span>
-          </el-form-item>
-          <el-form-item label="手机：">
-            <span>{{ props.row.phone }}</span>
-          </el-form-item>
-          <!-- <el-form-item label="密码：">
-            <span>{{ props.row.password | filterPassword}}</span>
-          </el-form-item> -->
-          <el-form-item label="创建时间：">
-            <span>{{ props.row.gmtCreateTime }}</span>
-          </el-form-item>
-          <el-form-item label="管理员状态">
-            <span>{{ props.row.admin_status }}</span>
           </el-form-item>
         </el-form>
       </template>
@@ -37,7 +22,7 @@
         width="80">
       </el-table-column>
       <el-table-column
-        prop="adminEmployeeNo"
+        prop="account"
         label="员工账号"
         width="180">
       </el-table-column>
@@ -131,6 +116,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+
  .demo-table-expand {
     font-size: 0;
   }
