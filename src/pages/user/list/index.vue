@@ -4,43 +4,27 @@
       :data="users"
       height="100%"
       style="width: 100%">
-      <!-- address
-      balance
-      cardNo
-      createTime
-      extraInfo
-      id
-      name
-      password
-      phone
-      status -->
 
       <el-table-column type="expand">
       <template slot-scope="props">
         <el-form label-position="left" inline class="demo-table-expand">
-          <el-form-item label="编号：">
-            <span>{{ props.row.id }}</span>
-          </el-form-item>
-          <el-form-item label="姓名：">
+          <el-form-item label="姓名">
             <span>{{ props.row.name }}</span>
           </el-form-item>
-          <el-form-item label="手机：">
-            <span>{{ props.row.phone }}</span>
+           <el-form-item label="密码">
+            <span>{{ props.row.password }}</span>
           </el-form-item>
-          <el-form-item label="密码：">
-            <span>{{ props.row.password | filterPassword}}</span>
+           <el-form-item label="账号：">
+            <span>{{ props.row.account }}</span>
           </el-form-item>
-          <el-form-item label="创建时间：">
-            <span>{{ props.row.createTime }}</span>
+           <el-form-item label="账号：">
+            <span>{{ props.row.account }}</span>
           </el-form-item>
-          <el-form-item label="余额：">
-            <span>{{ props.row.balance | filterMoney }}</span>
+           <el-form-item label="账号：">
+            <span>{{ props.row.account }}</span>
           </el-form-item>
-          <el-form-item label="地址：">
-            <span>{{ props.row.addrsss | filterCarNo }}</span>
-          </el-form-item>
-           <el-form-item label="身份证号：">
-            <span>{{ props.row.carNo | filterCarNo }}</span>
+           <el-form-item label="账号：">
+            <span>{{ props.row.account }}</span>
           </el-form-item>
         </el-form>
       </template>
@@ -48,16 +32,27 @@
       <el-table-column
         prop="id"
         label="编号"
-        width="180">
+        width="80">
       </el-table-column>
       <el-table-column
         prop="name"
         label="姓名"
         width="180">
       </el-table-column>
+     <el-table-column
+        prop="password"
+        label="密码"
+        width="180">
+      </el-table-column>
       <el-table-column
-        prop="createTime"
-        label="创建时间">
+        prop="phone"
+        label="手机号"
+        width="120">
+      </el-table-column>
+      <el-table-column
+        prop="balance"
+        label="余额"
+        width="220">
       </el-table-column>
       <el-table-column
       label="操作"

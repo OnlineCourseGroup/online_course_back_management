@@ -97,6 +97,23 @@ export default {
               path: "addo"
             }
           ]
+        },
+        {
+          name: "user",
+          text: "用户模块",
+          icon: "view",
+          children: [
+            {
+              name: "ulist",
+              text: "用户列表",
+              path: "ulist"
+            },
+            {
+              name: "addu",
+              text: "新建用户",
+              path: "addu"
+            } 
+          ]
         }
       ]
     };

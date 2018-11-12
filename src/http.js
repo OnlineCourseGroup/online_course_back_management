@@ -11,7 +11,6 @@ axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 // axios拦截器
 axios.interceptors.response.use((response) => {
   if (response.data.retCode === 200 || response.data.retCode === '200') {
-    console.log(response.data)
     return response.data.retValue || response.data.message;
   }
   throw new Error(response.data.msg || '服务异常 at: http.js');
