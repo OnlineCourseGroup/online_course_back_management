@@ -4,7 +4,8 @@ import UserRoutes from './user';
 import ManagerRoutes from './manager';
 import AdminRoutes from './admin';
 import OrderRoutes from './order';
-
+import ComentRoutes from './comment'
+import SubjectRoutes from './subject'
 
 export default [
   {
@@ -17,6 +18,8 @@ export default [
       ...ManagerRoutes,
       ...AdminRoutes,
       ...OrderRoutes,
+      ...ComentRoutes,
+      ...SubjectRoutes
     ],
   },
 ];

@@ -101,7 +101,7 @@ export default {
         {
           name: "user",
           text: "用户模块",
-          icon: "view",
+          icon: "share",
           children: [
             {
               name: "ulist",
@@ -114,7 +114,41 @@ export default {
               path: "addu"
             } 
           ]
-        }
+        },
+        {
+          name: "subject",
+          text: "题目模块",
+          icon: "date",
+          children: [
+            {
+              name: "slist",
+              text: "题目列表",
+              path: "slist"
+            },
+            {
+              name: "adds",
+              text: "新添讲师",
+              path: "adds"
+            }
+          ]
+        },
+        {
+          name: "commenet",
+          text: "评论模块",
+          icon: "message",
+          children: [
+            {
+              name: "clist",
+              text: "评论列表",
+              path: "clist"
+            },
+            {
+              name: "addc",
+              text: "新建评论",
+              path: "addc"
+            }          
+          ]
+        },
       ]
     };
   },
