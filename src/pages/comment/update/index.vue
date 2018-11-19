@@ -2,27 +2,39 @@
   <div class="add--wrapper both--100 flex--bcenter">
      <div class="box">
        <h2 class="form--title">{{title}}</h2>
+
+       
        <el-form :model="models" status-icon :rules="rules" ref="form" class="add--form">
-        <el-form-item prop="adminEmployeeNo" class="width--100">
-          <el-input  v-model="models.adminEmployeeNo" auto-complete="off" disabled="true" placeholder="管理员编号">
+         <el-form-item prop="adminEmployeeNo" class="width--100">
+          <el-input  v-model="models.adminEmployeeNo" auto-complete="off" placeholder="管理员编号">
             <i slot="prefix" class="el-input__icon el-icon-info"></i>
             </el-input>
-        </el-form-item>
-        <el-form-item prop="account" class="width--100">
-          <el-input  v-model="models.account" auto-complete="off" placeholder="账号">
+         </el-form-item>
+         <el-form-item prop="amount" class="width--100">
+          <el-input  v-model="models.amount" auto-complete="off" placeholder="数额">
             <i slot="prefix" class="el-input__icon el-icon-info"></i>
             </el-input>
-        </el-form-item>
-        <el-form-item prop="password" class="width--100">
-          <el-input  v-model="models.password" auto-complete="off" placeholder="密码">
+         </el-form-item>
+         <el-form-item prop="courseId" class="width--100">
+          <el-input  v-model="models.courseId" auto-complete="off" placeholder="课程编号">
             <i slot="prefix" class="el-input__icon el-icon-info"></i>
             </el-input>
-        </el-form-item>
-        <el-form-item prop="phone" class="width--100">
-          <el-input  v-model="models.phone" auto-complete="off" placeholder="手机号">
+         </el-form-item>  
+         <el-form-item prop="content" class="width--100">
+          <el-input  v-model="models.content" auto-complete="off" placeholder="内容">
             <i slot="prefix" class="el-input__icon el-icon-info"></i>
             </el-input>
-        </el-form-item>
+         </el-form-item>
+         <el-form-item prop="starLevel" class="width--100">
+          <el-input  v-model="models.starLevel" auto-complete="off" placeholder="开始等级">
+            <i slot="prefix" class="el-input__icon el-icon-info"></i>
+            </el-input>
+         </el-form-item>
+         <el-form-item prop="extraInfo" class="width--100">
+          <el-input  v-model="models.extraInfo" auto-complete="off" placeholder="其他信息">
+            <i slot="prefix" class="el-input__icon el-icon-info"></i>
+            </el-input>
+         </el-form-item>     
         <el-form-item  class="width--100 flex flex--space--around">
           <el-button type="primary" @click="submitForm('form')">确定</el-button>
           <el-button type="normal" @click="cancel()">取消</el-button>
@@ -34,7 +46,7 @@
 </template>
 
 <script>
-import { updateAdmin, singleAdmin } from 'services'
+import { updateComment, singleComment } from 'services'
 import { AdminTypes } from 'enum'
 export default {
     created() {
@@ -52,14 +64,14 @@ export default {
       };
       return {
         models: {
-          adminEmployeeNo: '',
-          account: '',
-          password: '',
-          phone: '',
-          gmtCreateTime: '',
-          status: '',
-          adminInfo: '',
-          extraInfo: '',
+          id: '',
+          amount: '',
+          ownerId: '',
+          commenterId: '',
+          courseId: '',
+          content: '',
+          starLevel: '',
+          extraInfo: ''
         },
         types: [],
         rules: {
@@ -137,7 +149,7 @@ export default {
     },
     computed: {
       title() {
-        return '修改管理员'
+        return '修改评论'
       }
     }
   }

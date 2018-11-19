@@ -10,9 +10,33 @@
           <el-form-item label="编号：">
             <span>{{ props.row.id }}</span>
           </el-form-item>
-           <el-form-item label="账号：">
-            <span>{{ props.row.account }}</span>
+           <el-form-item label="数量：">
+            <span>{{ props.row.amount }}</span>
           </el-form-item>
+          <el-form-item label="所有者编号：">
+            <span>{{ props.row.ownerId }}</span>
+          </el-form-item>
+          <el-form-item label="评论编号：">
+            <span>{{ props.row.commenterId }}</span>
+          </el-form-item>
+          <el-form-item label="课程编号：">
+            <span>{{ props.row.courseId }}</span>
+          </el-form-item>
+          <el-form-item label="内容：">
+            <span>{{ props.row.content }}</span>
+          </el-form-item>
+          <el-form-item label="创建时间：">
+            <span>{{ props.row.gmtCreateTime }}</span>
+          </el-form-item>
+          <el-form-item label="状态：">
+            <span>{{ props.row.status }}</span>
+          </el-form-item>
+          <el-form-item label="开始等级：">
+            <span>{{ props.row.starLevel }}</span>
+          </el-form-item>
+          <el-form-item label="其他信息：">
+            <span>{{ props.row.extraInfo }}</span>
+          </el-form-item> 
         </el-form>
       </template>
     </el-table-column>
@@ -22,30 +46,26 @@
         width="80">
       </el-table-column>
       <el-table-column
-        prop="account"
-        label="员工账号"
+        prop="amount"
+        label="数量"
         width="180">
       </el-table-column>
      <el-table-column
-        prop="phone"
-        label="手机号"
+        prop="ownerId"
+        label="所有者编号"
         width="180">
       </el-table-column>
       <el-table-column
-        prop="account"
-        label="姓名"
+        prop="commenterId"
+        label="评论编号"
         width="120">
       </el-table-column>
       <el-table-column
-        prop="gmtCreateTime"
-        label="创建时间"
+        prop="courseId"
+        label="课程编号"
         width="220">
       </el-table-column>
-      <el-table-column
-        prop="status"
-        label="状态"
-        width="80">
-      </el-table-column>
+
       <el-table-column
       label="操作"
       width="230">
@@ -62,7 +82,7 @@
 </template>
 
 <script>
-import { getAllAdmins, deleteAdminById } from 'services'
+import { getAllComment, deleteCommentById } from 'services'
 import { filterAdminTypes, filterPassword } from 'tool/filters'
 export default {
   name: 'adminList',

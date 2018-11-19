@@ -1,63 +1,64 @@
 <template>
   <div class="list--wrapper both--100">
-     <el-table
+    <el-table
       :data="orders"
       height="100%"
       style="width: 100%">
-      <!-- address
-      balance
-      cardNo
-      createTime
-      extraInfo
-      id
-      name
-      password
-      phone
-      status -->
-
-      <!-- <el-table-column type="expand">
-      <template slot-scope="props">
-        <el-form label-position="left" inline class="demo-table-expand">
+     <el-table-column type="expand">
+       <template slot-scope="props">
+         <el-form label-position="left" inline class="demo-table-expand">
           <el-form-item label="编号：">
             <span>{{ props.row.id }}</span>
           </el-form-item>
-          <el-form-item label="用户编号：">
-            <span>{{ props.row.userId }}</span>
+          <el-form-item label="总额：">
+            <span>{{ props.row.amount }}</span>
           </el-form-item>
-          <el-form-item label="向导编号：">
-            <span>{{ props.row.guiderId }}</span>
+          <el-form-item label="收款编号：">
+            <span>{{ props.row.eranerId }}</span>
           </el-form-item>
-          <el-form-item label="总金额：">
-            <span>{{ props.row.totalMoney | filterMoney}}</span>
+          <el-form-item label="课程编号：">
+            <span>{{ props.row.courseId }}</span>
           </el-form-item>
-          <el-form-item label="订单时间：">
-            <span>{{ props.row.orderTime }}</span>
+          <el-form-item label="时间戳：">
+            <span>{{ props.row.timestampCreateTime }}</span>
+          </el-form-item>
+          <el-form-item label="创建时间：">
+            <span>{{ props.row.gmtCreateTime }}</span>
+          </el-form-item>
+          <el-form-item label="状态：">
+            <span>{{ props.row.status }}</span>
+          </el-form-item>
+          <el-form-item label="发展：">
+            <span>{{ props.row.progress }}</span>
+          </el-form-item>
+          <el-form-item label="其他信息：">
+            <span>{{ props.row.extraInfo }}</span>
           </el-form-item>
         </el-form>
-      </template>
-    </el-table-column> -->
+      </template>  
+    </el-table-column>
       <el-table-column
         prop="id"
         label="编号"
         width="180">
       </el-table-column>
       <el-table-column
-        prop="userId"
-        label="用户编号"
+        prop="amount"
+        label="总额"
         width="180">
       </el-table-column>
       <el-table-column
-        prop="guiderId"
-        label="向导编号">
-      </el-table-column>
-      <el-table-column
-        prop="totalMoney"
-        label="总金额">
-      </el-table-column>
-      <el-table-column
-        prop="orderTime"
+        prop="timestampCreateTime"
         label="订单时间">
       </el-table-column>
+      <el-table-column
+        prop="status"
+        label="状态">
+      </el-table-column> 
+      <el-table-column
+        prop="extraInfo"
+        label="其他信息">
+      </el-table-column>   
       <el-table-column
       label="操作"
       width="230">

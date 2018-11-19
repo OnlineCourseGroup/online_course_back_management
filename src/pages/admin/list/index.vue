@@ -42,11 +42,6 @@
         width="220">
       </el-table-column>
       <el-table-column
-        prop="status"
-        label="状态"
-        width="80">
-      </el-table-column>
-      <el-table-column
       label="操作"
       width="230">
       <template slot-scope="scope">

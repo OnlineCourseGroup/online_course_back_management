@@ -5,15 +5,18 @@
       height="100%"
       style="width: 100%">
       <!-- address
-      balance
-      cardNo
-      createTime
-      extraInfo
       id
-      name
       password
       phone
-      status -->
+      balance
+      bankCardNo
+      idCardNo
+      professionNo
+      gmtCreateTime
+      status 
+      info
+      extraInfo
+      -->
 
       <el-table-column type="expand">
       <template slot-scope="props">
@@ -21,27 +24,36 @@
           <el-form-item label="编号：">
             <span>{{ props.row.id }}</span>
           </el-form-item>
-          <el-form-item label="姓名：">
-            <span>{{ props.row.name }}</span>
+          <el-form-item label="密码：">
+            <span>{{ props.row.password }}</span>
           </el-form-item>
           <el-form-item label="手机：">
             <span>{{ props.row.phone }}</span>
           </el-form-item>
-          <el-form-item label="密码：">
-            <span>{{ props.row.password | filterPassword}}</span>
+          <el-form-item label="余额：">
+            <span>{{ props.row.balance | filterPassword}}</span>
           </el-form-item>
-          <el-form-item label="创建时间：">
-            <span>{{ props.row.createTime }}</span>
+          <el-form-item label="银行号码：">
+            <span>{{ props.row.bankCardNo }}</span>
           </el-form-item>
-          <el-form-item label="余额">
-            <span>{{ props.row.balance | filterMoney }}</span>
+          <el-form-item label="身份证号：">
+            <span>{{ props.row.idCardNo | filterMoney }}</span>
           </el-form-item>
-          <el-form-item label="地址">
-            <span>{{ props.row.addrsss | filterCarNo }}</span>
+          <el-form-item label="从业编号">
+            <span>{{ props.row.professionNo | filterCarNo }}</span>
           </el-form-item>
-          <el-form-item label="身份证号">
-            <span>{{ props.row.carNo | filterCarNo }}</span>
+          <el-form-item label="创建时间">
+            <span>{{ props.row.gmtCreateTime | filterCarNo }}</span>
           </el-form-item>
+          <el-form-item label="状态">
+            <span>{{ props.row.status | filterCarNo }}</span>
+          </el-form-item>
+          <el-form-item label="信息">
+            <span>{{ props.row.info | filterCarNo }}</span>
+          </el-form-item>
+          <el-form-item label="其他信息">
+            <span>{{ props.row.extraInfo | filterCarNo }}</span>
+          </el-form-item> 
         </el-form>
       </template>
     </el-table-column>
@@ -50,20 +62,22 @@
         label="编号"
         width="180">
       </el-table-column>
-      <el-table-column
-        prop="name"
-        label="姓名"
+       <el-table-column
+        prop="bankCardNo"
+        label="银行号码："
         width="180">
       </el-table-column>
-      <el-table-column
-        prop="createTime"
-        label="创建时间"
-      >
+       <el-table-column
+        prop="balance"
+        label="余额"
+        width="180">
       </el-table-column>
-      <!-- <el-table-column
-        prop="creator"
-        label="创建人">
-      </el-table-column> -->
+       <el-table-column
+        prop="info"
+        label="信息"
+        width="180">
+      </el-table-column>
+     
       <el-table-column
       label="操作"
       width="230">

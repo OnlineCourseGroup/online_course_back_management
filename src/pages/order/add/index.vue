@@ -3,21 +3,51 @@
      <div class="box auto--margin">
        <h2 class="form--title">{{title}}</h2>
        <el-form :model="models" status-icon :rules="rules" ref="form" class="add--form">
-        <el-form-item prop="userId" class="width--100"> 
-          <el-input v-model="models.userId" auto-complete="off" placeholder="用户编号">
-            <i slot="prefix" class="el-input__icon el-icon-news"></i>
-          </el-input>
-        </el-form-item>
         <el-form-item prop="id" class="width--100"> 
-          <el-input v-model="models.id" auto-complete="off" placeholder="向导编号">
+          <el-input v-model="models.id" auto-complete="off" placeholder="编号">
             <i slot="prefix" class="el-input__icon el-icon-mobile-phone"></i>
           </el-input>
         </el-form-item>
-        <el-form-item prop="totalMoney" class="width--100"> 
-          <el-input  v-model="models.totalMoney" auto-complete="off" placeholder="订单金额">
-            <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+        <el-form-item prop="amount" class="width--100"> 
+          <el-input v-model="models.amount" auto-complete="off" placeholder="总额">
+            <i slot="prefix" class="el-input__icon el-icon-mobile-phone"></i>
           </el-input>
         </el-form-item>
+        <el-form-item prop="eranerId" class="width--100"> 
+          <el-input v-model="models.eranerId" auto-complete="off" placeholder="收入编号">
+            <i slot="prefix" class="el-input__icon el-icon-mobile-phone"></i>
+          </el-input>
+        </el-form-item> 
+        <el-form-item prop="cosumerId" class="width--100"> 
+          <el-input v-model="models.cosumerId" auto-complete="off" placeholder="消费者编号">
+            <i slot="prefix" class="el-input__icon el-icon-mobile-phone"></i>
+          </el-input>
+        </el-form-item>
+        <el-form-item prop="timestampCreateTime" class="width--100"> 
+          <el-input v-model="models.timestampCreateTime" auto-complete="off" placeholder="时间戳">
+            <i slot="prefix" class="el-input__icon el-icon-mobile-phone"></i>
+          </el-input>
+        </el-form-item> 
+        <el-form-item prop="gmtCreateTime" class="width--100"> 
+          <el-input v-model="models.gmtCreateTime" auto-complete="off" placeholder="创建时间">
+            <i slot="prefix" class="el-input__icon el-icon-mobile-phone"></i>
+          </el-input>
+        </el-form-item>
+        <el-form-item prop="status" class="width--100"> 
+          <el-input v-model="models.status" auto-complete="off" placeholder="状态">
+            <i slot="prefix" class="el-input__icon el-icon-mobile-phone"></i>
+          </el-input>
+        </el-form-item>
+        <el-form-item prop="progress" class="width--100"> 
+          <el-input v-model="models.progress" auto-complete="off" placeholder="发展">
+            <i slot="prefix" class="el-input__icon el-icon-mobile-phone"></i>
+          </el-input>
+        </el-form-item>
+        <el-form-item prop="extraInfo" class="width--100"> 
+          <el-input v-model="models.extraInfo" auto-complete="off" placeholder="其他信息">
+            <i slot="prefix" class="el-input__icon el-icon-mobile-phone"></i>
+          </el-input>
+        </el-form-item>               
         <el-form-item  class="width--100 flex--space--around">
           <el-button type="primary" @click="submitForm('form')">确定</el-button>
           <el-button type="normal" @click="cancel()">取消</el-button>
@@ -36,10 +66,13 @@ export default {
     data() {
       return {
         models: {
-          userId: '',
           id: '',
-          totalMoney: '',
-          orderTime: '',
+          amount: '',
+          eranerId: '',
+          cosumerId: '',
+          timestampCreateTime: '',
+          progress: '',
+          extraInfo: ''
         },
         rules: {
           userId: [

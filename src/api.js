@@ -43,4 +43,18 @@ export default(config => Object.keys(config).reduce((copy, name) => {
   // rsa block
   getPublicKey: '/api/rsa/get',
   RSALogin: '/api/rsa/login',
+
+  //comment block
+  getAllComment: 'api/comment/list',
+  deleteCommentById: 'api/comment/delete',
+  addComment: 'api/Comment/comment',
+  singleComment: '/api/Comment/single',
+  updateComment: '/api/Comment/update',
+
+  //subject block
+  getAllSubject: 'api/subject/list',
+  deleteSubjectById: 'api/subject/delete',
+  addSubject: '/api/delete/insert',
+  singleSubject: '/api/subject/single',
+  updateSubject: '/api/subject/update'
 });

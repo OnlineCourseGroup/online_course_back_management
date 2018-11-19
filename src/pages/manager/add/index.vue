@@ -1,10 +1,23 @@
 <template>
   <div class="add--wrapper both--100 flex--bcenter">
      <div class="box auto--margin">
+       <!-- address
+      id
+      password
+      phone
+      balance
+      bankCardNo
+      idCardNo
+      professionNo
+      gmtCreateTime
+      status 
+      info
+      extraInfo
+      -->
        <h2 class="form--title">{{title}}</h2>
        <el-form :model="models" status-icon :rules="rules" ref="form" class="add--form">
-        <el-form-item prop="name" class="width--100"> 
-          <el-input v-model="models.name" auto-complete="off" placeholder="姓名">
+        <el-form-item prop="id" class="width--100"> 
+          <el-input v-model="models.id" auto-complete="off" placeholder="编号">
             <i slot="prefix" class="el-input__icon el-icon-news"></i>
           </el-input>
         </el-form-item>
@@ -18,6 +31,41 @@
             <i slot="prefix" class="el-input__icon el-icon-edit"></i>
           </el-input>
         </el-form-item>
+        <el-form-item prop="balance" class="width--100"> 
+          <el-input  v-model="models.balance" auto-complete="off" placeholder="余额">
+            <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+          </el-input>
+        </el-form-item>
+        <el-form-item prop="bankCardNo" class="width--100"> 
+          <el-input  v-model="models.bankCardNo" auto-complete="off" placeholder="银行编号">
+            <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+          </el-input>
+        </el-form-item>
+        <el-form-item prop="idCardNo" class="width--100"> 
+          <el-input  v-model="models.idCardNo" auto-complete="off" placeholder="身份证编号">
+            <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+          </el-input>
+        </el-form-item> 
+        <el-form-item prop="professionNo" class="width--100"> 
+          <el-input  v-model="models.professionNo" auto-complete="off" placeholder="职业编号">
+            <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+          </el-input>
+        </el-form-item> 
+        <el-form-item prop="status" class="width--100"> 
+          <el-input v-model="models.status" auto-complete="off" placeholder="状态">
+            <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+          </el-input>
+        </el-form-item>
+        <el-form-item prop="Info" class="width--100"> 
+          <el-input  v-model="models.Info" auto-complete="off" placeholder="信息">
+            <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+          </el-input>
+        </el-form-item>   
+        <el-form-item prop="extraInfo" class="width--100"> 
+          <el-input  v-model="models.extraInfo" auto-complete="off" placeholder="其他信息">
+            <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+          </el-input>
+        </el-form-item>      
         <el-form-item  class="width--100 flex--space--around">
           <el-button type="primary" @click="submitForm('form')">确定</el-button>
           <el-button type="normal" @click="cancel()">取消</el-button>
@@ -36,9 +84,16 @@ export default {
     data() {
       return {
         models: {
-          name: '',
-          phone: '',
+          id: '',
           password: '',
+          phone: '',
+          balance: '',
+          bankCardNo: '',
+          idCardNo: '',
+          professionNo: '',
+          status: '',
+          info: '',
+          extraInfo: ''
         },
         rules: {
           phone: [
@@ -84,7 +139,7 @@ export default {
     },
     computed: {
       title() {
-        return '添加向导'
+        return '添加管理人员'
       }
     }
   }

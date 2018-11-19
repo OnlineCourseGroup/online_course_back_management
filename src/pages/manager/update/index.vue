@@ -2,51 +2,61 @@
   <div class="add--wrapper both--100 flex--bcenter">
      <div class="box">
        <h2 class="form--title">{{title}}</h2>
-       <el-form :model="models" status-icon :rules="rules" ref="form" class="add--form" label-width="80px">
-        <el-form-item prop="account" class="width--100" label="编号">
-          <el-input  v-model="models.id" auto-complete="off" placeholder="编号" :disabled="true">
-            <i slot="prefix" class="el-input__icon el-icon-menu"></i>
-            </el-input>
-        </el-form-item>
-        <el-form-item prop="account" class="width--100" label="账号">
-          <el-input  v-model="models.account" auto-complete="off" placeholder="账号">
-            <i slot="prefix" class="el-input__icon el-icon-info"></i>
-            </el-input>
-        </el-form-item>
-        <el-form-item prop="name" class="width--100" label="姓名"> 
-          <el-input v-model="models.name" auto-complete="off" placeholder="姓名">
+       <el-form :model="models" status-icon :rules="rules" ref="form" class="add--form">
+        <el-form-item prop="id" class="width--100"> 
+          <el-input v-model="models.id" auto-complete="off" placeholder="编号">
             <i slot="prefix" class="el-input__icon el-icon-news"></i>
           </el-input>
         </el-form-item>
-        <el-form-item prop="phone" class="width--100" label="手机号"> 
+        <el-form-item prop="phone" class="width--100"> 
           <el-input v-model="models.phone" auto-complete="off" placeholder="手机号">
             <i slot="prefix" class="el-input__icon el-icon-mobile-phone"></i>
           </el-input>
         </el-form-item>
-        <el-form-item prop="password" class="width--100" label="密码"> 
-          <el-input type="password" v-model="models.password" auto-complete="off" placeholder="密码" :disabled="true">
+        <el-form-item prop="password" class="width--100"> 
+          <el-input type="password" v-model="models.password" auto-complete="off" placeholder="密码">
             <i slot="prefix" class="el-input__icon el-icon-edit"></i>
           </el-input>
         </el-form-item>
-        <el-form-item prop="paswword" class="width--100" label="创建时间"> 
-          <el-input v-model="models.createTime" auto-complete="off" placeholder="密码" :disabled="true">
-            <i slot="prefix" class="el-input__icon el-icon-date"></i>
+        <el-form-item prop="balance" class="width--100"> 
+          <el-input  v-model="models.balance" auto-complete="off" placeholder="余额">
+            <i slot="prefix" class="el-input__icon el-icon-edit"></i>
           </el-input>
         </el-form-item>
-        <el-form-item class="width--100" prop="type"  label="类别">
-          <el-select v-model="models.type" placeholder="请选择管理员类别" class="width--100">
-            <el-option
-              v-for="item in types"
-              :key="item.value"
-              :label="item.key"
-              :value="item.value">
-            </el-option>
-          </el-select>
+        <el-form-item prop="bankCardNo" class="width--100"> 
+          <el-input  v-model="models.bankCardNo" auto-complete="off" placeholder="银行编号">
+            <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+          </el-input>
         </el-form-item>
-        <el-form-item  class="width--100 flex flex--space--around">
+        <el-form-item prop="idCardNo" class="width--100"> 
+          <el-input  v-model="models.idCardNo" auto-complete="off" placeholder="身份证编号">
+            <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+          </el-input>
+        </el-form-item> 
+        <el-form-item prop="professionNo" class="width--100"> 
+          <el-input  v-model="models.professionNo" auto-complete="off" placeholder="职业编号">
+            <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+          </el-input>
+        </el-form-item> 
+        <el-form-item prop="status" class="width--100"> 
+          <el-input v-model="models.status" auto-complete="off" placeholder="状态">
+            <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+          </el-input>
+        </el-form-item>
+        <el-form-item prop="Info" class="width--100"> 
+          <el-input  v-model="models.Info" auto-complete="off" placeholder="信息">
+            <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+          </el-input>
+        </el-form-item>   
+        <el-form-item prop="extraInfo" class="width--100"> 
+          <el-input  v-model="models.extraInfo" auto-complete="off" placeholder="其他信息">
+            <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+          </el-input>
+        </el-form-item>      
+        <el-form-item  class="width--100 flex--space--around">
           <el-button type="primary" @click="submitForm('form')">确定</el-button>
           <el-button type="normal" @click="cancel()">取消</el-button>
-          <el-button type="danger" @click="reset()">重置密码</el-button>
+          <el-button type="danger" @click="reset('form')">清空</el-button>
         </el-form-item>
       </el-form>
      </div>
@@ -54,7 +64,7 @@
 </template>
 
 <script>
-import { updateAdmin, singleAdmin } from 'services'
+import { updateManager, singleManager } from 'services'
 import { AdminTypes } from 'enum'
 export default {
     created() {
@@ -73,11 +83,15 @@ export default {
       return {
         models: {
           id: '',
-          account: '',
-          name: '',
-          phone: '',
           password: '',
-          type: AdminTypes.NORMAL.value,
+          phone: '',
+          balance: '',
+          bankCardNo: '',
+          idCardNo: '',
+          professionNo: '',
+          status: '',
+          info: '',
+          extraInfo: ''
         },
         types: [],
         rules: {

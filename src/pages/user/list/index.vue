@@ -8,24 +8,36 @@
       <el-table-column type="expand">
       <template slot-scope="props">
         <el-form label-position="left" inline class="demo-table-expand">
-          <el-form-item label="姓名">
+          <el-form-item label="编号：">
+            <span>{{ props.row.id }}</span>
+          </el-form-item>
+           <el-form-item label="姓名：">
             <span>{{ props.row.name }}</span>
           </el-form-item>
-           <el-form-item label="密码">
-            <span>{{ props.row.password }}</span>
+           <el-form-item label="手机号：">
+            <span>{{ props.row.phone }}</span>
           </el-form-item>
-           <el-form-item label="账号：">
-            <span>{{ props.row.account }}</span>
+           <el-form-item label="余额：">
+            <span>{{ props.row.balance }}</span>
           </el-form-item>
-           <el-form-item label="账号：">
-            <span>{{ props.row.account }}</span>
+           <el-form-item label="银行卡号：">
+            <span>{{ props.row.bankCardNo }}</span>
           </el-form-item>
-           <el-form-item label="账号：">
-            <span>{{ props.row.account }}</span>
+          <el-form-item label="身份证号：">
+            <span>{{ props.row.idCardNo }}</span>
           </el-form-item>
-           <el-form-item label="账号：">
-            <span>{{ props.row.account }}</span>
+          <el-form-item label="创建时间：">
+            <span>{{ props.row.gmtCreateTime }}</span>
           </el-form-item>
+          <el-form-item label="状态：">
+            <span>{{ props.row.status }}</span>
+          </el-form-item>  
+          <el-form-item label="信息：">
+            <span>{{ props.row.info }}</span>
+          </el-form-item>  
+          <el-form-item label="其他信息：">
+            <span>{{ props.row.extraInfo }}</span>
+          </el-form-item> 
         </el-form>
       </template>
     </el-table-column>

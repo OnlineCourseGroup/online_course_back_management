@@ -10,9 +10,21 @@
           <el-form-item label="编号：">
             <span>{{ props.row.id }}</span>
           </el-form-item>
-           <el-form-item label="账号：">
-            <span>{{ props.row.account }}</span>
+          <el-form-item label="账号：">
+            <span>{{ props.row.name }}</span>
           </el-form-item>
+          <el-form-item label="发布编号：">
+            <span>{{ props.row.uploadId }}</span>
+          </el-form-item> 
+          <el-form-item label="状态：">
+            <span>{{ props.row.status }}</span>
+          </el-form-item> 
+          <el-form-item label="创建时间：">
+            <span>{{ props.row.gmtCreateTime }}</span>
+          </el-form-item> 
+          <el-form-item label="其他信息：">
+            <span>{{ props.row.extraInfo }}</span>
+          </el-form-item> 
         </el-form>
       </template>
     </el-table-column>
@@ -21,30 +33,20 @@
         label="编号"
         width="80">
       </el-table-column>
-      <el-table-column
-        prop="account"
-        label="员工账号"
-        width="180">
-      </el-table-column>
      <el-table-column
-        prop="phone"
-        label="手机号"
+        prop="name"
+        label="姓名"
         width="180">
       </el-table-column>
       <el-table-column
-        prop="account"
-        label="姓名"
+        prop="uploadId"
+        label="发布编号"
         width="120">
       </el-table-column>
       <el-table-column
         prop="gmtCreateTime"
         label="创建时间"
         width="220">
-      </el-table-column>
-      <el-table-column
-        prop="status"
-        label="状态"
-        width="80">
       </el-table-column>
       <el-table-column
       label="操作"
@@ -62,7 +64,7 @@
 </template>
 
 <script>
-import { getAllAdmins, deleteAdminById } from 'services'
+import { getSubjectAdmins, deleteSubjectById } from 'services'
 import { filterAdminTypes, filterPassword } from 'tool/filters'
 export default {
   name: 'adminList',
