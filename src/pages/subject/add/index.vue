@@ -18,11 +18,6 @@
             <i slot="prefix" class="el-input__icon el-icon-info"></i>
             </el-input>
         </el-form-item>
-        <el-form-item prop="status" class="width--100">
-          <el-input  v-model="models.status" auto-complete="off" placeholder="状态">
-            <i slot="prefix" class="el-input__icon el-icon-info"></i>
-            </el-input>
-        </el-form-item>
         <el-form-item prop="extraInfo" class="width--100">
           <el-input  v-model="models.extraInfo" auto-complete="off" placeholder="其他信息">
             <i slot="prefix" class="el-input__icon el-icon-info"></i>
@@ -59,7 +54,6 @@ export default {
         models: {
           id: '',
           name: '',
-          status: '',
           uploadId: '',
           extraInfo: ''
         },

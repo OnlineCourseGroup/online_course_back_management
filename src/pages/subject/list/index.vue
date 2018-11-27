@@ -1,7 +1,7 @@
 <template>
   <div class="list--wrapper both--100">
      <el-table
-      :data="admins"
+      :data="subjects"
       height="100%"
       style="width: 100%">
       <el-table-column type="expand">
@@ -64,13 +64,13 @@
 </template>
 
 <script>
-import { getSubjectAdmins, deleteSubjectById } from 'services'
+import { getAllSubject, deleteSubjectById } from 'services'
 import { filterAdminTypes, filterPassword } from 'tool/filters'
 export default {
   name: 'adminList',
   data() {
     return {
-      admins: []
+      subjects: []
     }
   },
   created() {
@@ -78,7 +78,7 @@ export default {
   },
   methods: {
     refreshAdmins() {
-      getAllAdmins().then(res => {
+      getAllSubject().then(res => {
         this.admins = res
       }).catch(err => {
         this.$message.error(err.message || err || '网络异常')

@@ -4,12 +4,12 @@
        <h2 class="form--title">{{title}}</h2>
        <el-form :model="models" status-icon :rules="rules" ref="form" class="add--form">
         <el-form-item prop="id" class="width--100">
-          <el-input  v-model="models.adminEmployeeNo" auto-complete="off" placeholder="管理员编号">
+          <el-input  v-model="models.id" auto-complete="off" placeholder="管理员编号">
             <i slot="prefix" class="el-input__icon el-icon-info"></i>
             </el-input>
         </el-form-item>
         <el-form-item prop="name" class="width--100">
-          <el-input  v-model="models.account" auto-complete="off" placeholder="账号">
+          <el-input  v-model="models.name" auto-complete="off" placeholder="账号">
             <i slot="prefix" class="el-input__icon el-icon-info"></i>
             </el-input>
         </el-form-item>
@@ -23,18 +23,8 @@
             <i slot="prefix" class="el-input__icon el-icon-info"></i>
             </el-input>
         </el-form-item>
-        <el-form-item prop="balance" class="width--100">
-          <el-input  v-model="models.gmtCreateTime" auto-complete="off" placeholder="创建时间">
-            <i slot="prefix" class="el-input__icon el-icon-info"></i>
-            </el-input>
-        </el-form-item>
-        <el-form-item prop="bankCardNo" class="width--100">
-          <el-input  v-model="models.status" auto-complete="off" placeholder="状态">
-            <i slot="prefix" class="el-input__icon el-icon-info"></i>
-            </el-input>
-        </el-form-item>
         <el-form-item prop="idCardNo" class="width--100">
-          <el-input  v-model="models.adminInfo" auto-complete="off" placeholder="管理员信息">
+          <el-input  v-model="models.idCardNo" auto-complete="off" placeholder="管理员信息">
             <i slot="prefix" class="el-input__icon el-icon-info"></i>
             </el-input>
         </el-form-item>
@@ -78,7 +68,6 @@ export default {
           password: '',
           balance: '',
           idCardNo: '',
-          gmtCreateTime: '',
           info: '',
           extraInfo: ''
         },

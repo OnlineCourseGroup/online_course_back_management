@@ -51,11 +51,6 @@
             <i slot="prefix" class="el-input__icon el-icon-edit"></i>
           </el-input>
         </el-form-item> 
-        <el-form-item prop="status" class="width--100"> 
-          <el-input v-model="models.status" auto-complete="off" placeholder="状态">
-            <i slot="prefix" class="el-input__icon el-icon-edit"></i>
-          </el-input>
-        </el-form-item>
         <el-form-item prop="Info" class="width--100"> 
           <el-input  v-model="models.Info" auto-complete="off" placeholder="信息">
             <i slot="prefix" class="el-input__icon el-icon-edit"></i>
@@ -91,7 +86,6 @@ export default {
           bankCardNo: '',
           idCardNo: '',
           professionNo: '',
-          status: '',
           info: '',
           extraInfo: ''
         },

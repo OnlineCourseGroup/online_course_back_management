@@ -1,13 +1,13 @@
 import apis from '../api'
 import http from '../http'
 
-export const getAllContent = (params = {}) => http.get(apis.getAllContent,params);
+export const getAllComment = (params = {}) => http.get(apis.getAllComment,params);
 
-export const deleteContentById = (params ={}) => http.post(apis.deleteContentById);
+export const deleteCommentById = (params ={}) => http.post(apis.deleteContentById);
 
-export const singleContent = (params ={}) => http.post(apis.singleContent);
+export const singleComment = (params ={}) => http.post(apis.singleContent);
 
-export const updateContent = (params ={}) => http.post(apis.updateContent);
+export const updateComment = (params ={}) => http.post(apis.updateContent);
 
-export const addContent = (params ={}) => http.post(apis.addContent);
+export const addComment = (params ={}) => http.post(apis.addContent);
 

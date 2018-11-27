@@ -1,7 +1,7 @@
 <template>
   <div class="list--wrapper both--100">
      <el-table
-      :data="admins"
+      :data="comments"
       height="100%"
       style="width: 100%">
       <el-table-column type="expand">
@@ -88,7 +88,7 @@ export default {
   name: 'adminList',
   data() {
     return {
-      admins: []
+      comments: []
     }
   },
   created() {
@@ -96,8 +96,8 @@ export default {
   },
   methods: {
     refreshAdmins() {
-      getAllAdmins().then(res => {
-        this.admins = res
+      getAllComment().then(res => {
+        this.comments = res
       }).catch(err => {
         this.$message.error(err.message || err || '网络异常')
       })

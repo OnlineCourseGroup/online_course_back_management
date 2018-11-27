@@ -1,23 +1,9 @@
 <template>
   <div class="list--wrapper both--100">
      <el-table
-      :data="guiders"
+      :data="managers"
       height="100%"
       style="width: 100%">
-      <!-- address
-      id
-      password
-      phone
-      balance
-      bankCardNo
-      idCardNo
-      professionNo
-      gmtCreateTime
-      status 
-      info
-      extraInfo
-      -->
-
       <el-table-column type="expand">
       <template slot-scope="props">
         <el-form label-position="left" inline class="demo-table-expand">
@@ -109,7 +95,7 @@ export default {
   methods: {
     refreshManagers() {
       getAllManagers().then(res => {
-        this.guiders = res
+        this.managers = res
       }).catch(err => {
         this.$message.error(err.message || err || '网络异常')
       })

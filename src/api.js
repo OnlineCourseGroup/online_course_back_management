@@ -47,9 +47,9 @@ export default(config => Object.keys(config).reduce((copy, name) => {
   //comment block
   getAllComment: 'api/comment/list',
   deleteCommentById: 'api/comment/delete',
-  addComment: 'api/Comment/comment',
-  singleComment: '/api/Comment/single',
-  updateComment: '/api/Comment/update',
+  addComment: 'api/comment/add',
+  singleComment: '/api/comment/single',
+  updateComment: '/api/comment/update',
 
   //subject block
   getAllSubject: 'api/subject/list',
